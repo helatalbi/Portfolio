@@ -1,0 +1,62 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Full Stack</h2>
+		<p>Capacité à exceller à la fois dans le développement web front-end et back-end, offrant un ensemble de compétences complet pour créer des applications web complètes et soignées.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Développeur Full Stack collaboratif</h2>
+		<p>En tant que Développeur Full Stack, je conçois des applications web dynamiques tout en m'intégrant parfaitement à des groupes diversifiés. Mon engagement envers la résolution collaborative de problèmes, la communication et les réussites partagées se reflète dans chaque projet. Rejoignez-moi pour découvrir comment j'allie technologie et collaboration pour stimuler l'innovation et fournir des résultats exceptionnels.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Orienté Stratégie</h2>
+		<p>En tant que Développeur Full Stack Orienté Stratégie, je ne me contente pas de coder ; j'analyse, je planifie et j'exécute avec intention. Grâce à une attention méticuleuse portée à l'expérience utilisateur, à l'architecture des données et à la collaboration efficace, je veille à ce que chaque projet témoigne de la mise en œuvre d'une réflexion stratégique.</p>
+	</div>
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>

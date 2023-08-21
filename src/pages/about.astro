@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="A proppos | Houssemeddine Mhedhbi" description="About Houssemeddine Mhedhbi">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="A propos"
+				tagline="Merci d'être passé. Lisez ci-dessous pour en savoir plus sur moi-même et mon parcours."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/at-work.jpg"
+					alt="Houssemeddine Mhedhbi at work "
+				/>
+			</Hero>
+
+			
+			<section>
+				<h2 class="section-title">Éducation</h2>
+				<div class="content">
+					<p><strong>2021-2024</strong><br>Diplôme national d’ingénieur en génie logiciel à ESPRIT (Ecole Supérieure Privée d'Ingénieurie et de Technologie)</p>
+					<p><strong>2010-2014</strong><br>Licence appliquée en informatique industrielle à ISSAT SOUSSE</p>
+					<p><strong>2010</strong><br>Baccalauréat Sciences expérimentales à lycée cité Erriadh Bouficha</p>
+
+
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Expérience</h2>
+				<div class="content">
+					<p><strong>Technicien en informatique (2014-2021) à TUNISIE TRAVAUX | BOUFICHA-SOUSSE TUNISIE</strong><br>Développement de plusieurs applications de gestion de salariés :</p>
+					<p>- Gestion de recrutement, de congés et de stagiaires</p>
+					<p>- Support et maintenance des outils utilisés</p>
+					<p>- Formation de stagiaires et de nouveaux recrus</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Projets Académiques</h2>
+				<div class="content">
+					<p><strong>BAZ'ART</strong><br>Création d'une application e-commerce web-desktop en utilisant JavaFX et symfony5</p>
+					<p><strong>INDUS-MARKET</strong><br>Création d'une application e-commerce en utilisant Spring Boot, Angular et GitHub</p>
+					<p><strong>APPLICATION DESKTOP</strong><br>Création d'une application Desktop en utilisant Ubuntu(Linux), Langage C, Glade</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Stages</h2>
+				<div class="content">
+					<p><strong>Juin 2022 - Août 2022</strong><br><strong>Stage d'immersion en entreprise :</strong><br>Création d'une application Web qui présente la société STT en utilisant les langages HTML, CSS, JavaScript et PHP, sur le site de la Société Tunisie Travaux (STT) chez Société Tunisie Travaux </p>
+					<p><strong>Juin 2022 - Août 2022</strong><br><strong>Stage d'immersion en entreprise :</strong><br>Mise en place d'une architecture de sécurité à base de produits Fortinet chez Kleos</p>
+					<p><strong>June 2023 - august 2023</strong><br><strong>Stage ingénieur :</strong><br>Création d'une application mobile pour les rappels de prises de médicaments en utilisant Ionic/Angular et Spring Boot chezLouati Sécurité et Informatique </p>
+				</div>
+			</section>
+			
+			<section>
+				<h2 class="section-title">Compétences</h2>
+				<div class="content">
+					<p><strong>Développement web :</strong><br>Angular, Spring, Symfony,.Net.</p>
+					<p><strong>Programmation :</strong><br> C, C#, Java, JavaScript.</p>
+					<p><strong>Bases de données :</strong><br> Oracle, Sql, MySql.</p>
+					<p><strong>Systèmes d'exploitaion :</strong><br> Windows, Linux(Ubuntu, Centos).</p>
+					<p><strong>Modélisation:</strong><br>  UML(starUML).</p>
+					<p><strong>Réseaux (outils de simulation):</strong><br>  Packet Tracer, GNS3.</p>
+
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
